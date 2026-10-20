@@ -13,6 +13,18 @@ npm run dev
 
 Mở <http://localhost:3000>. Để kiểm tra bản build: `npm run build` rồi `npm run preview`.
 
+## Chạy bằng Docker
+
+Yêu cầu Docker Desktop đang chạy. Tại thư mục project, chạy:
+
+```bash
+docker compose up --build -d
+```
+
+Mở <http://localhost:3000>. Nginx đã được cấu hình để truy cập trực tiếp các URL React Router như <http://localhost:3000/about-us>.
+
+Xem log bằng `docker compose logs -f`; dừng bằng `docker compose down`. Nếu cổng 3000 đã được sử dụng, đổi phần `3000` trong `compose.yaml` sang một cổng khác, ví dụ `3001:80`.
+
 ## Các đường dẫn
 
 | URL | Nội dung |
